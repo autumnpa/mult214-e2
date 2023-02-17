@@ -62,56 +62,6 @@
 	<!-- Div element for React to insert created elements into once refactored -->
 	<div id="root"></div>
 
-	<!-- Section 1 - Intro Component - Title & Description -->
-	<!-- <h1>Roller Skates</h1>
-	<p>A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll
-		along on a hard surface.</p> -->
-
-	<!--Section 2 - List Component - Title & List Items -->
-	<!-- <h2>Reasons to Use Roller Skates</h2>
-	<ul>
-		<li>Roller skating is a fun way to stay active and improve your fitness</li>
-		<li>Roller skates can be used both indoors and outdoors, providing a versatile mode of transportation</li>
-		<li>Roller skating is an environmentally friendly way to get around</li>
-		<li>Roller skating can be a social activity, making it a great way to meet new people and spend time with
-			friends</li>
-		<li>Roller skating can provide a sense of freedom and independence, as well as a thrill of speed and agility
-		</li>
-	</ul> -->
-
-	<!-- Section 3 - Price Component - Heading & Prices w/ Countries -->
-	<!-- <h2>Average Roller Skate Prices by Country</h2>
-	<table>
-		<thead>
-			<tr>
-				<th>Country</th>
-				<th>Average Price (USD)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>United States</td>
-				<td>$100.00</td>
-			</tr>
-			<tr>
-				<td>Canada</td>
-				<td>$125.00</td>
-			</tr>
-			<tr>
-				<td>United Kingdom</td>
-				<td>£75.00</td>
-			</tr>
-			<tr>
-				<td>Australia</td>
-				<td>$150.00</td>
-			</tr>
-			<tr>
-				<td>Japan</td>
-				<td>¥10,000</td>
-			</tr>
-		</tbody>
-	</table> -->
-
 	<!-- DONT FORGET TO ADD SCRIPT TYPE BABEL -->
 	<!-- DONT FORGET REACT RENDER IN SCRIPT -->
 	<script type="text/babel">
@@ -143,7 +93,6 @@
 									// Inside <ul> so use <li>
 									// Use item inside curly brackets to get the value out of each list item to be displayed
 									<li>{item}</li>
-
 								)
 							)
 						}
@@ -169,7 +118,6 @@
 								}
 							</tr>
 						</thead>
-
 						<tbody>
 							{
 								props.countryPrices.map(
@@ -188,7 +136,6 @@
 		}
 
 		function App() {
-
 			// Array created with list items from HTML code provided
 			const list_items = [
 				"Roller skating is a fun way to stay active and improve your fitness",
@@ -213,22 +160,6 @@
 				{ country: "Australia", price: "$150.00" },
 				{ country: "Japan", price: "¥10,000" }
 			]
-
-			// const countryName = [
-			// 	"United States",
-			// 	"Canada",
-			// 	"United Kingdom",
-			// 	"Australia",
-			// 	"Japan"
-			// ]
-
-			// const countryPrice = [
-			// 	"$100.00",
-			// 	"$125.00",
-			// 	"£75.00",
-			// 	"$150.00",
-			// 	"¥10,000"
-			// ]
 
 			// Intro props are title and description
 			// List props are title and list w/array of items
