@@ -129,11 +129,13 @@
 		}
 
 		// List Component
+		// Use map to make the list look better
+		// Array
 
 		function List(props) {
 			return (
 				<div>
-					<h2>Reasons to Use Roller Skates</h2>
+					<h2>{title.props}</h2>
 					<ul>
 						<li>Roller skating is a fun way to stay active and improve your fitness</li>
 						<li>Roller skates can be used both indoors and outdoors, providing a versatile mode of transportation</li>
@@ -151,7 +153,7 @@
 			return (
 				<div>
 					<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll along on a hard surface." />,
-					<List />
+					<List title="Reasons to Use Roller Skates" />
 				</div>
 			);
 		}
