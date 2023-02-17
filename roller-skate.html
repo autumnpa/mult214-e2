@@ -156,7 +156,7 @@
 		function Price(props) {
 			return (
 				<div>
-					<h2>Average Roller Skate Prices by Country</h2>
+					<h2>{props.title}</h2>
 					<table>
 						<thead>
 							<tr>
@@ -227,7 +227,7 @@
 				<div>
 					<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll along on a hard surface." />
 					<List title="Reasons to Use Roller Skates" list={list_items} />
-					<Price />
+					<Price title="Average Roller Skate Prices by Country" />
 				</div>
 			);
 		}
