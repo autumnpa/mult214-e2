@@ -172,8 +172,13 @@
 
 						<tbody>
 							<tr>
-								<td></td>
-								<td></td>
+								{
+									props.country.map(
+										item => (
+											<td>{item}</td>
+										)
+									)
+								}
 							</tr>
 						</tbody>
 					</table>
@@ -200,6 +205,14 @@
 				"Average Price (USD)"
 			]
 
+			// const countryPrices = [
+			// 	{ country: "United States", price: "$100.00" },
+			// 	{ country: "Canada", price: "$125.00" },
+			// 	{ country: "United Kingdom", price: "£75.00" },
+			// 	{ country: "Australia", price: "$150.00" },
+			// 	{ country: "Japan", price: "¥10,000" }
+			// ]
+
 			const countryName = [
 				"United States",
 				"Canada",
@@ -222,7 +235,7 @@
 				<div>
 					<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll along on a hard surface." />
 					<List title="Reasons to Use Roller Skates" list={list_items} />
-					<Price title="Average Roller Skate Prices by Country" headers={tableHead} />
+					<Price title="Average Roller Skate Prices by Country" headers={tableHead} country={countryName} />
 				</div>
 			);
 		}
