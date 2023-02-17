@@ -160,30 +160,20 @@
 					<table>
 						<thead>
 							<tr>
-								<th>Country</th>
-								<th>Average Price (USD)</th>
+								{
+									props.headers.map(
+										item => (
+											<th>{item}</th>
+										)
+									)
+								}
 							</tr>
 						</thead>
+
 						<tbody>
 							<tr>
-								<td>United States</td>
-								<td>$100.00</td>
-							</tr>
-							<tr>
-								<td>Canada</td>
-								<td>$125.00</td>
-							</tr>
-							<tr>
-								<td>United Kingdom</td>
-								<td>£75.00</td>
-							</tr>
-							<tr>
-								<td>Australia</td>
-								<td>$150.00</td>
-							</tr>
-							<tr>
-								<td>Japan</td>
-								<td>¥10,000</td>
+								<td></td>
+								<td></td>
 							</tr>
 						</tbody>
 					</table>
@@ -202,8 +192,13 @@
 				"Roller skating can provide a sense of freedom and independence, as well as a thrill of speed and agility"
 			]
 
-			// Create another array with the country name and the price
+			// Create another array with the country name and the price as keys and values????
+			// Does that work in React and JSX ^^
 			// OR Create one array for country names and another for country prices - will the index match up during output?
+			const tableHead = [
+				"Country",
+				"Average Price (USD)"
+			]
 
 			const countryName = [
 				"United States",
@@ -227,7 +222,7 @@
 				<div>
 					<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll along on a hard surface." />
 					<List title="Reasons to Use Roller Skates" list={list_items} />
-					<Price title="Average Roller Skate Prices by Country" />
+					<Price title="Average Roller Skate Prices by Country" headers={tableHead} />
 				</div>
 			);
 		}
