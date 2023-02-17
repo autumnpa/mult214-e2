@@ -63,9 +63,9 @@
 	<div id="root"></div>
 
 	<!-- Section 1 - Intro Component - Heading & Description -->
-	<h1>Roller Skates</h1>
+	<!-- <h1>Roller Skates</h1>
 	<p>A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll
-		along on a hard surface.</p>
+		along on a hard surface.</p> -->
 
 	<!--Section 2 - List Component - Heading & List Items -->
 	<h2>Reasons to Use Roller Skates</h2>
@@ -115,8 +115,24 @@
 	<!-- DONT FORGET TO ADD SCRIPT TYPE BABEL -->
 	<!-- DONT FORGET REACT RENDER IN SCRIPT -->
 	<script type="text/babel">
+		// Create components below
+		// Intro Component
+		function Intro(props) {
+			// Use props as default
+			return (
+				// JSX element needs to be rwapped in a parent element - use div
+				<div>
+					<h1>Roller Skates</h1>
+					<p>A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll
+						along on a hard surface.</p>
+				</div>
+			);
+		}
+
+		// Render section stays at the bottom!
 		ReactDOM.render(
-			<p>Hello World</p>,
+			// Needs internal closing tag to show its ended there
+			<Intro />,
 			document.getElementById("root")
 		);
 	</script>
