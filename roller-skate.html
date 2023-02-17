@@ -80,7 +80,7 @@
 	</ul> -->
 
 	<!-- Section 3 - Price Component - Heading & Prices w/ Countries -->
-	<h2>Average Roller Skate Prices by Country</h2>
+	<!-- <h2>Average Roller Skate Prices by Country</h2>
 	<table>
 		<thead>
 			<tr>
@@ -110,7 +110,7 @@
 				<td>¥10,000</td>
 			</tr>
 		</tbody>
-	</table>
+	</table> -->
 
 	<!-- DONT FORGET TO ADD SCRIPT TYPE BABEL -->
 	<!-- DONT FORGET REACT RENDER IN SCRIPT -->
@@ -131,7 +131,6 @@
 		// List Component
 		// Use map to make the list look better
 		// Make an array in the App function using list items
-
 		function List(props) {
 			return (
 				<div>
@@ -153,6 +152,45 @@
 			);
 		}
 
+		// Price Component
+		function Price(props) {
+			return (
+				<div>
+					<h2>Average Roller Skate Prices by Country</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Country</th>
+								<th>Average Price (USD)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>United States</td>
+								<td>$100.00</td>
+							</tr>
+							<tr>
+								<td>Canada</td>
+								<td>$125.00</td>
+							</tr>
+							<tr>
+								<td>United Kingdom</td>
+								<td>£75.00</td>
+							</tr>
+							<tr>
+								<td>Australia</td>
+								<td>$150.00</td>
+							</tr>
+							<tr>
+								<td>Japan</td>
+								<td>¥10,000</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			);
+		}
+
 		function App() {
 
 			// Array created with list items from HTML code provided
@@ -170,6 +208,7 @@
 				<div>
 					<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll along on a hard surface." />
 					<List title="Reasons to Use Roller Skates" list={list_items} />
+					<Price />
 				</div>
 			);
 		}
