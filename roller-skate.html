@@ -137,7 +137,16 @@
 				<div>
 					<h2>{props.title}</h2>
 					<ul>
+						{
+							props.list.map(
+								// Parameters going in
+								item => (
+									// Inside <ul> so use <li>
+									<li>Hello World</li>
 
+								)
+							)
+						}
 					</ul>
 				</div>
 			);
