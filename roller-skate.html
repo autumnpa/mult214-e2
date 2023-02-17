@@ -62,12 +62,12 @@
 	<!-- Div element for React to insert created elements into once refactored -->
 	<div id="root"></div>
 
-	<!-- Section 1 - Intro Component - Heading & Description -->
+	<!-- Section 1 - Intro Component - Title & Description -->
 	<!-- <h1>Roller Skates</h1>
 	<p>A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll
 		along on a hard surface.</p> -->
 
-	<!--Section 2 - List Component - Heading & List Items -->
+	<!--Section 2 - List Component - Title & List Items -->
 	<h2>Reasons to Use Roller Skates</h2>
 	<ul>
 		<li>Roller skating is a fun way to stay active and improve your fitness</li>
@@ -122,9 +122,8 @@
 			return (
 				// JSX element needs to be rwapped in a parent element - use div
 				<div>
-					<h1>Roller Skates</h1>
-					<p>A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll
-						along on a hard surface.</p>
+					<h1>{props.title}</h1>
+					<p>{props.description}</p>
 				</div>
 			);
 		}
@@ -132,7 +131,8 @@
 		// Render section stays at the bottom!
 		ReactDOM.render(
 			// Needs internal closing tag to show its ended there
-			<Intro />,
+			<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll
+						along on a hard surface." />,
 			document.getElementById("root")
 		);
 	</script>
