@@ -60,7 +60,7 @@
 
 <body>
 	<!-- Div element for React to insert created elements into once refactored -->
-	<div id="output"></div>
+	<div id="root"></div>
 
 	<!-- Section 1 - Intro Component - Heading & Description -->
 	<h1>Roller Skates</h1>
@@ -115,7 +115,10 @@
 	<!-- DONT FORGET TO ADD SCRIPT TYPE BABEL -->
 	<!-- DONT FORGET REACT RENDER IN SCRIPT -->
 	<script type="text/babel">
-
+		ReactDOM.render(
+			<p>Hello World</p>,
+			document.getElementById("root")
+		);
 	</script>
 </body>
 
