@@ -171,16 +171,16 @@
 						</thead>
 
 						<tbody>
-							<tr>
-								{
-									props.countryPrices.map(
-										item => (
-											<td>{item.country}</td>,
+							{
+								props.countryPrices.map(
+									item => (
+										<tr>
+											<td>{item.country}</td>
 											<td>{item.price}</td>
-										)
+										</tr>
 									)
-								}
-							</tr>
+								)
+							}
 						</tbody>
 					</table>
 				</div>
