@@ -147,12 +147,21 @@
 			);
 		}
 
+		function App() {
+			return (
+				<div>
+					<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll along on a hard surface." />,
+					<List />
+				</div>
+			);
+		}
+
 		// Render section stays at the bottom!
+		// Only ONE thing in render - create new function to avoid errors
 		ReactDOM.render(
 			// Needs internal closing tag to show its ended there
 			// Add each component and they are created - Intro, List, Price
-			<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll along on a hard surface." />,
-			<List />,
+			<App />,
 			document.getElementById("root")
 		);
 	</script>
