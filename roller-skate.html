@@ -130,30 +130,36 @@
 
 		// List Component
 		// Use map to make the list look better
-		// Array
+		// Make an array in the App function using list items
 
 		function List(props) {
 			return (
 				<div>
-					<h2>{title.props}</h2>
+					<h2>{props.title}</h2>
 					<ul>
-						<li>Roller skating is a fun way to stay active and improve your fitness</li>
-						<li>Roller skates can be used both indoors and outdoors, providing a versatile mode of transportation</li>
-						<li>Roller skating is an environmentally friendly way to get around</li>
-						<li>Roller skating can be a social activity, making it a great way to meet new people and spend time with
-							friends</li>
-						<li>Roller skating can provide a sense of freedom and independence, as well as a thrill of speed and agility
-						</li>
+
 					</ul>
 				</div>
 			);
 		}
 
 		function App() {
+
+			// Array created with list items from HTML code provided
+			const list_items = [
+				"Roller skating is a fun way to stay active and improve your fitness",
+				"Roller skates can be used both indoors and outdoors, providing a versatile mode of transportation",
+				"Roller skating is an environmentally friendly way to get around",
+				"Roller skating can be a social activity, making it a great way to meet new people and spend time with friends",
+				"Roller skating can provide a sense of freedom and independence, as well as a thrill of speed and agility"
+			]
+
+			// Intro props are title and description
+			// List props are title and list w/array of items
 			return (
 				<div>
 					<Intro title="Roller Skates" description="A roller skate is a type of shoe or boot that is fitted with wheels on the bottom to enable the wearer to roll along on a hard surface." />,
-					<List title="Reasons to Use Roller Skates" />
+					<List title="Reasons to Use Roller Skates" list={list_items} />
 				</div>
 			);
 		}
